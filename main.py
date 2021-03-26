@@ -22,3 +22,5 @@ if __name__ == "__main__":
     # eventually read environmental variables from file
     if exists(env_filepath):
         utils.export_env(env_filepath)
+
+    uvicorn.run(app=app)
