@@ -1,4 +1,3 @@
-import logging
 import re
 import numpy as np
 
@@ -7,7 +6,7 @@ def roll_dice(roll_string: str, return_steps: bool = False):
     # replaces rolls with random numbers
     parsed_roll_string = roll_string
     roll_string = " ".join(roll_string.split()).strip()
-    raw_rolls = re.findall(pattern="[0-9]* *d[0-9]+", string=roll_string, flags=re.IGNORECASE)
+    raw_rolls = re.findall(pattern="[0-9]* *d *[0-9]+", string=roll_string, flags=re.IGNORECASE)
     for roll in raw_rolls:
         multiplier, dice = [int(n) for n in roll.split("d")]
         if not multiplier:

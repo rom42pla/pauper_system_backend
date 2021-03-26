@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 
-from routers import utils
+from routers import misc
 
 app = FastAPI()
 
 
-app.include_router(utils.router)
+app.include_router(misc.router)
 
 
 @app.get("/")
