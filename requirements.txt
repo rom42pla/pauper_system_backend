@@ -1,9 +1,5 @@
-certifi
-click
-fastapi
-h11
 numpy
+
 pydantic
-starlette
-typing-extensions
+fastapi
 uvicorn
