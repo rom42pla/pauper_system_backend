@@ -2,6 +2,7 @@ import uvicorn
 from os.path import join, exists
 
 from fastapi import FastAPI
+from starlette.responses import RedirectResponse
 
 from routers import misc
 from scripts import utils
@@ -15,7 +16,7 @@ app.include_router(misc.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Pauper System Backend! Check /docs for documentation!"}
+    return RedirectResponse(url='/docs')
 
 
 if __name__ == "__main__":
