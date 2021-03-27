@@ -1,5 +1,8 @@
+requests
+
 numpy
 
 pydantic
+pytest
 fastapi
 uvicorn

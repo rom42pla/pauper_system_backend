@@ -14,7 +14,6 @@ async def roll_dice(roll_string: str):
     try:
         steps = utils.roll_dice(roll_string=roll_string, return_steps=True)
     except Exception as e:
-        print(e)
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                             detail=f"Roll '{roll_string}' not understood. "
                                    f"Valid rolls are e.g. '2d20 + 5' or '2d20 - d4 - 1'")
